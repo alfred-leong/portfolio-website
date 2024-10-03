@@ -1,106 +1,130 @@
 ---
-layout: "../layouts/BaseLayout.astro"
-title: "My Portfolio"
+layout: "../layouts/BaseLayout.astro";
+title: "Alfred Leong";
 ---
 
-<section class="hero">
-  <div class="container">
-    <h1>Hi, I'm Alfred Leong</h1>
-    <p>I'm an aspiring engineer, building things that interest me.</p>
-    <a href="#projects" class="btn-primary">View My Work</a>
-  </div>
+<section class="intro-section">
+	<div class="container">
+		<h1>Hi, I'm Alfred</h1>
+		<p>I’m a software engineer and I love building things.</p>
+	</div>
 </section>
 
 <section id="about" class="about-section">
-  <h2>About Me</h2>
-  <p>[Your bio or introduction]</p>
+	<div class="container">
+		<h2>About Me</h2>
+		<p>I’m a software engineer with experience in mobile development.</p>
+	</div>
 </section>
 
 <section id="projects" class="projects-section">
-  <h2>Projects</h2>
-  <div class="project-list">
-    <div class="project-item">
-      <h3>Project Title 1</h3>
-      <p>Short description of the project.</p>
-      <a href="#" class="btn-secondary">See more</a>
-    </div>
-    <!-- Add more projects -->
-  </div>
+	<div class="container">
+		<h2>Projects</h2>
+		<div class="project-list">
+			<div class="project-item">
+				<h3>Project 1</h3>
+				<p>Description of the project and the technologies used.</p>
+				<a href="#" class="btn">View Project</a>
+			</div>
+			<div class="project-item">
+				<h3>Project 2</h3>
+				<p>Description of the project and the technologies used.</p>
+				<a href="#" class="btn">View Project</a>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section id="contact" class="contact-section">
-  <h2>Contact</h2>
-  <p>If you want to reach out, feel free to contact me!</p>
-  <a href="mailto:your-email@example.com" class="btn-primary">Send a Message</a>
+	<div class="container">
+		<h2>Contact Me</h2>
+		<p>If you'd like to work together, feel free to reach out!</p>
+		<a href="alfredleongweilun@gmail.com" class="btn">Get in Touch</a>
+	</div>
 </section>
-
 
 <style>
 	body {
-		font-family: Arial, sans-serif;
+		font-family: "Roboto", sans-serif;
 		margin: 0;
 		padding: 0;
-		line-height: 1.6;
-		background-color: #f4f4f4;
+		background-color: #fafafa;
+		color: #333;
 	}
 
-	header {
+	.container {
+		max-width: 1000px;
+		margin: 0 auto;
+		padding: 20px;
+	}
+
+	.site-header {
 		background-color: #333;
-		color: #fff;
-		padding: 1rem 0;
-		text-align: center;
+		color: white;
+		padding: 20px 0;
 	}
 
-	header ul {
+	.nav-links {
+		display: flex;
+		justify-content: flex-end;
 		list-style: none;
-		padding: 0;
 	}
 
-	header ul li {
-		display: inline;
-		margin: 0 10px;
+	.nav-links li {
+		margin-left: 20px;
 	}
 
-	header ul li a {
+	.nav-links a {
 		color: white;
 		text-decoration: none;
+		font-weight: bold;
 	}
 
-	.hero {
-		background: url('/hero-image.jpg') no-repeat center center/cover;
-		color: white;
-		padding: 100px 0;
+	.intro-section {
+		padding: 150px 20px;
 		text-align: center;
+		background-color: #f0f0f0;
+	}
+
+	.intro-section h1 {
+		font-size: 3rem;
+		margin-bottom: 20px;
 	}
 
 	.about-section,
 	.projects-section,
 	.contact-section {
-		padding: 50px 20px;
+		padding: 100px 20px;
 		text-align: center;
 	}
 
-	.btn-primary {
-		background-color: #007BFF;
-		color: white;
-		padding: 10px 20px;
-		text-decoration: none;
-		border-radius: 5px;
+	.projects-section .project-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 20px;
 	}
 
-	.btn-secondary {
-		background-color: #6c757d;
-		color: white;
-		padding: 10px 20px;
-		text-decoration: none;
-		border-radius: 5px;
+	.project-item {
+		background-color: white;
+		padding: 20px;
+		border: 1px solid #ddd;
+		border-radius: 10px;
 	}
 
-	footer {
+	.btn {
+		display: inline-block;
+		padding: 10px 20px;
 		background-color: #333;
 		color: white;
-		text-align: center;
-		padding: 20px 0;
+		text-decoration: none;
+		border-radius: 5px;
+		margin-top: 20px;
 	}
 
+	.site-footer {
+		background-color: #333;
+		color: white;
+		padding: 20px 0;
+		text-align: center;
+	}
 </style>

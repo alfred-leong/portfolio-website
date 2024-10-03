@@ -1,5 +1,4 @@
 ---
-// Define `title` as a prop that can be passed from pages.
 const { title } = Astro.props;
 ---
 
@@ -11,22 +10,26 @@ const { title } = Astro.props;
     <link rel="stylesheet" href="/styles/global.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="container">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       {Astro.slots}
     </main>
 
-    <footer>
-      <p>© {new Date().getFullYear()} [Alfred Leong]. All Rights Reserved.</p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© {new Date().getFullYear()} Kenneth Kiang. All Rights Reserved.</p>
+      </div>
     </footer>
   </body>
 </html>
